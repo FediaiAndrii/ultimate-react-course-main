@@ -140,5 +140,95 @@ function getBooks() {
 }
 
 function getBook(id) {
-  return data.find((d) => d.id === id);
+  return data.find(d => d.id === id);
 }
+
+// Destructuring
+
+const book = getBook(3);
+
+const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
+  book;
+title;
+author;
+genres;
+
+// const primaryGenre = genres[0];
+// const secondaryGenre = genres[1];
+
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+
+console.log(primaryGenre, secondaryGenre, otherGenres);
+
+const newGenres = ["epic fantasy", ...genres];
+console.log(newGenres);
+
+const updatedBook = {
+  ...book,
+  moviePublicationDate: "2001-12-19",
+  pages: 1210,
+};
+updatedBook;
+
+const summary = `${title} a book`;
+summary;
+
+pages > 1000 ? "over a thousand" : "less than 1000";
+
+// function getYear(str) {
+//   return str.split("-")[0];
+// }
+
+const getYear = str => str.split("-")[0];
+
+console.log(getYear(publicationDate));
+
+console.log(true && "Some string");
+console.log(false && "Some string");
+console.log(hasMovieAdaptation && "This book has a movie");
+
+console.log("andrii" && "fediai");
+console.log(0 && "fediai");
+
+console.log(true || "some string");
+console.log(false || "some string");
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+spanishTranslation;
+
+// console.log(book.reviews.librarything.reviewsCount);
+// const countWrong = book.reviews.librarything.reviewsCount ?? "no data";
+// countWrong;
+
+function getTotalReviewCount(book) {
+  const goodread = book.reviews.goodreads?.reviewsCount;
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+  librarything;
+  return goodread + librarything;
+}
+
+console.log(getTotalReviewCount(book));
+
+const books = [...data];
+
+// 1) add book object to array
+const newBook = {
+  id: 6,
+  title: "Harry Potter and the Chamber of secrets",
+  author: "J. K. Rowling",
+};
+const booksAfterAdd = [...books, newBook];
+booksAfterAdd;
+
+// 2) delete a book object from array
+
+const booksAfterDelete = booksAfterAdd.filter(book => book.id !== 3);
+booksAfterDelete;
+
+// 3) update book object in the array
+const booksAfterUpdate = booksAfterDelete.map(book =>
+  book.id === 1 ? { ...book, pages: 1210 } : book,
+);
+booksAfterUpdate;
