@@ -47,6 +47,8 @@ function Tabbed({ content }) {
   );
 }
 
+console.log(<DifferentContent test={23} />);
+
 function Tab({ num, activeTab, onClick }) {
   return (
     <button
@@ -72,7 +74,7 @@ function TabContent({ item }) {
       {showDetails && <p>{item.details}</p>}
 
       <div className="tab-actions">
-        <button onClick={() => setShowDetails((h) => !h)}>
+        <button onClick={() => setShowDetails(h => !h)}>
           {showDetails ? "Hide" : "Show"} details
         </button>
 
