@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# usePopcorn 🍿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Простий та інтерактивний React-додаток для пошуку фільмів та ведення списку переглянутого. Проєкт створено в рамках проходження курсу "The Ultimate React Course" від Джонаса Шмедтмана.
 
-## Available Scripts
+🌐 **Live Demo:** [Твоє посилання на GitHub Pages]
 
-In the project directory, you can run:
+## Головні функції
 
-### `npm start`
+- **Пошук фільмів:** Реалізовано через зовнішній OMDb API.
+- **Деталі фільму:** Перегляд постера, сюжету, акторського складу, режисера та рейтингу IMDb.
+- **Кастомний рейтинг:** Можливість оцінити фільм від 1 до 10 зірок перед додаванням у список (використовується власний компонент `StarRating`).
+- **Список переглянутого:** Додавання та видалення фільмів зі свого списку.
+- **Статистика:** Автоматичний підрахунок середнього рейтингу (IMDb та користувацького) і загального часу, витраченого на перегляд усіх доданих фільмів.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Технології
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React 18** (повністю на функціональних компонентах)
+- **React Hooks:** `useState`, `useEffect`
+- Асинхронний JavaScript (`fetch`, `async/await`)
+- Робота з OMDb API
 
-### `npm test`
+## Як запустити локально
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Склонуй репозиторій:
 
-### `npm run build`
+```bash
+git clone [https://github.com/твоя-назва-репозиторію.git](https://github.com/твоя-назва-репозиторію.git)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Встанови залежності:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Створи файл `config.js` у папці `src` та додай туди свій API-ключ від OMDb:
 
-### `npm run eject`
+```javascript
+export const KEY = "твій_ключ";
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Запусти локальний сервер:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Структура проєкту
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Код відрефакторено та розбито на логічні модулі:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `App.js` — Головний компонент, який зберігає стан (стейт) додатку.
+- `components/` — Папка з ізольованими компонентами (`MovieDetails`, `WatchedMovies`, `StarRating`, `NavBar` тощо).

@@ -42,7 +42,7 @@ export default function App() {
           setError("");
 
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&S=${query}`,
+            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal },
           );
 
@@ -70,7 +70,6 @@ export default function App() {
       }
 
       handleCloseMovie();
-
       fetchMovies();
 
       return function () {
