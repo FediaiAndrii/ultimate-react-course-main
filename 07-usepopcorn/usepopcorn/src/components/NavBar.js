@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export function NavBar({ children }) {
   return <nav className="nav-bar">{children}</nav>;
 }
@@ -12,6 +14,12 @@ export function Logo() {
 }
 
 export function Search({ query, setQuery }) {
+  useEffect(function () {
+    const el = document.querySelector(".search");
+    console.log(el);
+    el.focus();
+  }, []);
+
   return (
     <input
       className="search"
