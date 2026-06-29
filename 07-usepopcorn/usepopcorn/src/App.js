@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Main, Box, Loader, ErrorMessage } from "./components/UI";
 import { WatchedSummary, WatchedMovieList } from "./components/WatchedMovies";
@@ -6,7 +6,6 @@ import { MovieList } from "./components/Movie";
 import MovieDetails from "./components/MovieDetails";
 import { NavBar, Logo, Search, Numresults } from "./components/NavBar";
 
-// import { KEY } from "./config";
 import { useMovies } from "./useMovies";
 import { useLocalStorageState } from "./useLocalStorageState";
 
@@ -26,8 +25,6 @@ export default function App() {
 
   function handleAddWatched(movie) {
     setWatched(watched => [...watched, movie]);
-
-    // localStorage.setItem("watched", JSON.stringify([...watched, movie]));
   }
 
   function handleDeleteWatched(id) {
