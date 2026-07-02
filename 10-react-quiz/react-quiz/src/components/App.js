@@ -2,7 +2,7 @@ import { useEffect, useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
-import Error from "./Error";
+import ErrorMessage from "./ErrorMessage";
 import StartScreen from "./StartScreen";
 import Question from "./Question";
 import NextButton from "./NextButton";
@@ -55,7 +55,13 @@ function reducer(state, action) {
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
       };
-
+    case "restart":
+      console.log(state);
+      return {
+        ...initialState,
+        questions: state.questions,
+        status: "ready",
+      };
     default:
       throw new Error("Action unknown");
   }
@@ -84,7 +90,7 @@ export default function App() {
 
       <Main>
         {status === "loading" && <Loader />}
-        {status === "error" && <Error />}
+        {status === "error" && <ErrorMessage />}
         {status === "ready" && (
           <StartScreen numQuestions={numQuestions} dispatch={dispatch} />
         )}
@@ -115,6 +121,7 @@ export default function App() {
             points={points}
             maxPosiblePoints={maxPossiblePoints}
             highscore={highscore}
+            dispatch={dispatch}
           />
         )}
       </Main>
