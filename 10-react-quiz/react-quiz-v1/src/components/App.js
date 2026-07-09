@@ -1,7 +1,5 @@
 import { useEffect, useReducer } from "react";
 
-import questionsData from "../data/questions.json";
-
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -97,11 +95,10 @@ export default function App() {
   );
 
   useEffect(function () {
-    if (questionsData && questionsData.questions) {
-      dispatch({ type: "dataReceived", payload: questionsData.questions });
-    } else {
-      dispatch({ type: "dataFailed" });
-    }
+    fetch(`http://localhost:9000/questions`)
+      .then(res => res.json())
+      .then(data => dispatch({ type: "dataReceived", payload: data }))
+      .catch(err => dispatch({ type: "dataFailed" }));
   }, []);
 
   return (
