@@ -7,12 +7,15 @@ import L from "leaflet";
 import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
 import iconUrl from "leaflet/dist/images/marker-icon.png";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
+import { useCities } from "../contexts/CitiesContext";
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({ iconRetinaUrl, iconUrl, shadowUrl });
 
 function Map() {
   const navigate = useNavigate();
+
+  const { cities } = useCities();
 
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
@@ -32,11 +35,16 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
-        <Marker position={mapPosition}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+        {cities.map(city => (
+          <Marker
+            position={[city.position.lat, city.position.lng]}
+            key={city.id}
+          >
+            <Popup>
+              <span>{city.emoji}</span> <span>{city.cityName}</span>
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </div>
   );
