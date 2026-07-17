@@ -1,5 +1,5 @@
 export const flagemojiToPNG = flag => {
-  if (flag === undefined || flag === null) return;
+  if (!flag) return;
   const countryCode = Array.from(flag, codeUnit => codeUnit.codePointAt())
     .map(char => String.fromCharCode(char - 127397).toLowerCase())
     .join("");
