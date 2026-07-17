@@ -37,66 +37,6 @@
       "id": "98443197"
     },
     {
-      "cityName": "Calanda",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-07-17T10:23:15.630Z",
-      "notes": "sdfff",
-      "position": {
-        "lat": "40.91351257612758",
-        "lng": "-0.15380859375000003"
-      },
-      "id": "399Kl1v-0BE"
-    },
-    {
-      "cityName": "Calanda",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-07-17T10:24:32.957Z",
-      "notes": "dsf",
-      "position": {
-        "lat": "40.91351257612758",
-        "lng": "-0.15380859375000003"
-      },
-      "id": "sW2czisIru4"
-    },
-    {
-      "cityName": "Dos Aguas",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-07-17T10:28:16.258Z",
-      "notes": "fffa",
-      "position": {
-        "lat": "39.2832938689385",
-        "lng": "-0.7690429687500001"
-      },
-      "id": "gPLajDLgJes"
-    },
-    {
-      "cityName": "Ager",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-07-17T10:31:02.810Z",
-      "notes": "пппфп",
-      "position": {
-        "lat": "41.983994270935625",
-        "lng": "0.7690429687500001"
-      },
-      "id": "GCqjSqUhOGk"
-    },
-    {
-      "cityName": "Ossa de Montiel",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-07-17T10:35:40.222Z",
-      "notes": "fffa",
-      "position": {
-        "lat": "38.95940879245423",
-        "lng": "-2.7685546875000004"
-      },
-      "id": "PXMl6Ii-caQ"
-    },
-    {
       "cityName": "Lvivskyi Raion",
       "country": "Ukraine",
       "emoji": "🇺🇦",
@@ -107,30 +47,6 @@
         "lng": "24.01611328125"
       },
       "id": "5S0rjiiYm9s"
-    },
-    {
-      "cityName": "Santa Eulalia",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-07-17T10:39:12.262Z",
-      "notes": "ff",
-      "position": {
-        "lat": "40.58058466412764",
-        "lng": "-1.2304687500000002"
-      },
-      "id": "Wp4N_I888TE"
-    },
-    {
-      "cityName": "Larraga",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-07-17T10:40:25.515Z",
-      "notes": "fafa",
-      "position": {
-        "lat": "42.58544425738491",
-        "lng": "-1.8896484375000002"
-      },
-      "id": "Rea-n9wBb3s"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
