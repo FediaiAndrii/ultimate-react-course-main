@@ -1,52 +1,40 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
+      "cityName": "Alvito",
       "country": "Portugal",
       "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2026-07-17T12:09:12.814Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "38.272688535980976",
+        "lng": "-8.107910156250002"
       },
-      "id": "17806751"
+      "id": "4gSeiDoCfCc"
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Getafe",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2026-07-17T12:10:10.795Z",
+      "notes": "fa",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "40.3130432088809",
+        "lng": "-3.6914062500000004"
       },
-      "id": "98443197"
+      "id": "6ImCIJFqNXI"
     },
     {
       "cityName": "Lvivskyi Raion",
       "country": "Ukraine",
       "emoji": "🇺🇦",
-      "date": "2026-07-17T10:35:52.270Z",
+      "date": "2026-07-17T12:10:18.240Z",
       "notes": "",
       "position": {
-        "lat": "49.87339770318919",
-        "lng": "24.01611328125"
+        "lat": "49.781264058178344",
+        "lng": "23.950195312500004"
       },
-      "id": "5S0rjiiYm9s"
+      "id": "wO-n3s6B6JA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
