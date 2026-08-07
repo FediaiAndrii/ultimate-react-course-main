@@ -5,7 +5,6 @@ import { Outlet, useNavigation } from "react-router-dom";
 
 function AppLoayout() {
   const navigation = useNavigation();
-  console.log(navigation);
   const isLoading = navigation.state === "loading";
 
   return (
