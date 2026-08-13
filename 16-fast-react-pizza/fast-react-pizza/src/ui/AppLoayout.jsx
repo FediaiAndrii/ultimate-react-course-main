@@ -12,7 +12,7 @@ function AppLoayout() {
       {isLoading && <Loader />}
 
       <Header />
-      <div className="overflow-scroll sm:overflow-hidden">
+      <div className="no-scrollbar overflow-scroll">
         <main className="mx-auto max-w-3xl">
           <Outlet />
         </main>
